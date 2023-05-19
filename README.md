@@ -43,3 +43,9 @@ make run
 ```bash
 TERM=xterm sudo screen /dev/ttyACM1 9600
 ```
+
+## 6. optional - generate clangd `compile-commands.json` for lsp autocompletion in your editor
+
+```bash
+bear -- make
+```
