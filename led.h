@@ -6,9 +6,9 @@ extern void blink_led()
 	P1DIR = 0x40; // P1.6 output (green LED)
 	P1OUT = 0; // LED off
 
-	int i = 1000; // Delay
+	int i = 20000; // Delay
     while (i != 0) {
-		P1OUT ^= 0x40;
         i--; 
     }
+	P1OUT ^= 0x40;
 }

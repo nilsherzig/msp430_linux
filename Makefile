@@ -6,3 +6,8 @@ run:
 
 connect: 
 	TERM=xterm sudo screen /dev/ttyACM1 9600
+
+all: 
+	make compile 
+	make run 
+	make connect

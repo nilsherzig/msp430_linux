@@ -50,6 +50,10 @@ int main(void) {
     UCA0TXBUF = 'a'; // send a
     while (!(XUCA0TX_BUFFER_READY))
       ;
+    
+    UCA0TXBUF = 'b'; // send a
+    while (!(XUCA0TX_BUFFER_READY))
+      ;
 
     blink_led(); // used as a very professional debug check
 
