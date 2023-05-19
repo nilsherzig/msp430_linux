@@ -6,13 +6,15 @@ To establish a connection with your msp430 serial connection, it is necessary to
 
 ![jumper](./jumper.png)
 
-1) clone this repo
+# how to
+
+## 1. clone this repo
 
 ```bash 
 git clone https://github.com/nilsherzig/msp430_linux
 ```
 
-2) Install needed packages (or find the right ones for your distro)
+## 2. Install needed packages (or find the right ones for your distro)
 
 ```bash
 # install base dev tools and libs
@@ -27,20 +29,20 @@ or
 
 [setup](./setup.sh)
 
-3) compile
+## 3. compile
 
 ```bash
 make
 ```
 
-4) flash to msp430
+## 4. flash to msp430
 
 ```bash
 make run
 ```
 
 
-5) connect to `/dev/ttyACM1` via screen with baudrate 9600
+## 5. connect to `/dev/ttyACM1` via screen with baudrate 9600
 
 ```bash
 TERM=xterm sudo screen /dev/ttyACM1 9600
