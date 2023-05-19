@@ -39,15 +39,6 @@ int main(void) {
   P1SEL = XP1SEL_VAL;   // P1.2=TXD
   P1SEL2 = XP1SEL2_VAL; // P1.2=TXD
 
-  /* // configure UART-module 1200,8,n,1 (virtual: 4800,8,n,1) */
-  /* UCA0CTL1 |= XUCA0CTL1_VAL; // select appropriate CLK */
-  /* UCA0BR0 = XUCA0BR0_VAL;    // Low Byte */
-  /* UCA0BR1 = XUCA0BR1_VAL;    // High Byte */
-  /* UCA0MCTL = XUCA0MCTL_VAL;  // Modulation ACLK: UCBRSx = 2, other bits are
-   */
-  /*                            // forced to "0" */
-  /* UCA0CTL1 &= ~UCSWRST;      // **Initialize USCI state machine** */
-  //
   // configure uart0 for 9600 Baud, 8 Bit, no parity, 1 stop bit
   UCA0CTL1 |= UCSSEL_2; // SMCLK
   UCA0BR0 = 104;        // 1MHz 9600
