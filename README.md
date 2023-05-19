@@ -58,5 +58,5 @@ bear -- make
 
 ```bash 
 docker build . -t mspflash
-docker run --privleged mspflash # or configure udev rules instead of privleged
+docker run --privileged -v $(pwd):/msp430_linux mspflash # or configure udev rules instead of privleged
 ```
