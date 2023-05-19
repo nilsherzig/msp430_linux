@@ -4,7 +4,7 @@ I've used Fedora, but other distros have the same packages (at least ubuntu, nix
 
 To establish a connection with your msp430 serial connection, it is necessary to cross the rx and tx jumpers.
 
-![jumper](./jumper.jpeg)
+![jumper](./jumper.png)
 
 1) clone this repo
 
