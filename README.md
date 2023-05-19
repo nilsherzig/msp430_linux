@@ -8,7 +8,9 @@ To establish a connection with your msp430 serial connection, it is necessary to
 
 ![jumper](./jumper.png)
 
-## manual install 
+## setup 
+
+### manual install 
 
 1) clone this repo
 
@@ -39,24 +41,25 @@ make
 make run
 ```
 
-
-5) connect to `/dev/ttyACM1` via screen with baudrate 9600
-
-```bash
-TERM=xterm sudo screen /dev/ttyACM1 9600
-```
-
-6) optional - generate clangd `compile-commands.json` for lsp autocompletion in your editor
+5) optional - generate clangd `compile-commands.json` for lsp autocompletion in your editor
 
 ```bash
 bear -- make
 ```
 
-## using docker
+### using docker
 
 1) use docker to compile and flash the your code
 
 ```bash 
 docker build . -t mspflash
 docker run --privileged -v $(pwd):/msp430_linux mspflash # or configure udev rules instead of privleged
+```
+
+## connect to your msp serial console
+
+1) connect to `/dev/ttyACM1` via screen with baudrate 9600
+
+```bash
+TERM=xterm sudo screen /dev/ttyACM1 9600
 ```
