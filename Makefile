@@ -4,3 +4,5 @@ compile:
 run: 
 	sudo mspdebug tilib "prog current" 
 
+make connect: 
+	TERM=xterm sudo screen /dev/ttyACM1 9600
